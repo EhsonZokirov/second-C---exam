@@ -2,11 +2,16 @@
 using namespace std;
 int main ()
 {
-    int hour,min,sec,a;
+    int hour,minute,sec,a;
     cin>>a;
     hour=a/3600%24;
-    min=a/60%60;
-    sec=a/3600%60;
-    cout<<hour<<":"<<min<<":"<<sec;
+    minute=a/60%60;
+    sec=a%60;
+
+    cout<<hour<<":";
+    if(minute<10)cout<<"0";
+    cout<<minute<<":";
+    if(sec<10)cout<<"0";
+    cout<<sec;
 }
 

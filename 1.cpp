@@ -2,13 +2,16 @@
 using namespace std;
 int main ()
 {
-    int N,sum=0,n;
-    cin>>N;
+    int n,sum=0;
+    cin>>n;
 
-    for(int i=0; i<=N; i++)
+    while(n>0)
     {
-        sum+= (N%10);
-        n=(N/10);
-
+        sum+=n%10;
+        n=n/10;
+    }
     cout<<sum;
 }
+
+
+
